@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const sendEmailRoute = require('./routes/sendEmail.js');
 const path = require('path');
 const app = express();
-const PORT = 3500;
+const PORT = 8080;
 const  MongoClient = require ('mongodb').MongoClient;
 app.set('view engine', 'ejs');
 app.set('views', path.join(process.cwd(),'views'));
