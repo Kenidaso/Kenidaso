@@ -1,4 +1,4 @@
-const express =  require ('express');
+ const express =  require ('express');
 const ejs = require ("ejs");
 const email = require('../data/data.js');
 const result = require('../data/result.js');
@@ -23,7 +23,9 @@ async function GetTemplate(slug) {
 router.post('/', async (req, res) => {
     const data = req.body;
     try{
-        const { title, content } = await GetTemplate(data.template);
+        // const { title, content } = await GetTemplate(data.template);
+        let title = "abc";
+        let content =" aaaaa";
         let renderedTitle = ejs.render(title, data.data);
         let renderedHtml = ejs.render(content, data.data);
 

@@ -17,6 +17,10 @@ MongoClient.connect('mongodb://hsdev:hsdev1234@mongo.likequiz.com:27017/hsdev', 
 
 app.use('/send-email', sendEmailRoute);
 
+app.get('/home', (req, res) => {
+    res.send("Success shit");
+})
+
 
 app.listen(PORT, () => console.log(`Server running on port: http://localhost:${PORT}`));
 
