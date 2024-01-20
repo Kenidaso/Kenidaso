@@ -17,7 +17,7 @@ MongoClient.connect('mongodb://hsdev:hsdev1234@mongo.likequiz.com:27017/hsdev', 
 
 app.use('/send-email', sendEmailRoute);
 
-app.get('/home', (req, res) => {
+app.get('/', (req, res) => {
     res.send("Success kien me gai");
 })
 
